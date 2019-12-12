@@ -15,7 +15,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/pypa/sampleproject",
-    packages=setuptools.find_packages(),
+    packages=setuptools.find_packages() + ['static'],
     entry_points={ 
             'console_scripts': [ 
                 'pydo = pydo.pydo:main'
@@ -27,5 +27,6 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
+    include_package_data=True,
     install_requires=requirements,
 )
